@@ -20,15 +20,16 @@ const getRank = async (token, site) => {
 router.get('/:token/:site', async function(req, res, next) {
   const { token, site } = req.params
   const response = await getRank(token, site)
-  const rank = JSON.parse(convert.xml2json(response.data, {compact: true, spaces: 4}))
-    .Awis
-    .Results
-    .Result
-    .Alexa
-    .TrafficData
-    .Rank
-    ._text
-  res.json(rank);
+  const response2json = JSON.parse(convert.xml2json(response.data, {compact: true, spaces: 4}))
+  const rank = response2json
+    ?.Awis
+    ?.Results
+    ?.Result
+    ?.Alexa
+    ?.TrafficData
+    ?.Rank
+    ?._text
+  res.json(rank ? rank : 'No ranking available. Try again');
 });
 
 module.exports = router;
