@@ -1,0 +1,1 @@
+Simplify get requests to https://awis.api.alexa.com from Salesforce
