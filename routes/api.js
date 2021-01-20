@@ -22,14 +22,14 @@ router.get('/:token/:site', async function(req, res, next) {
   const response = await getRank(token, site)
   const response2json = JSON.parse(convert.xml2json(response.data, {compact: true, spaces: 4}))
   const rank = response2json
-    ?.Awis
-    ?.Results
-    ?.Result
-    ?.Alexa
-    ?.TrafficData
-    ?.Rank
-    ?._text
-  res.json(rank ? rank : 'no ranking available, try with another url');
+    .Awis
+    .Results
+    .Result
+    .Alexa
+    .TrafficData
+    .Rank
+    ._text
+  res.json(rank ? rank : 'no ranking found, please try with another url');
 });
 
 module.exports = router;
