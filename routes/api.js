@@ -29,7 +29,7 @@ router.get('/:token/:site', async function(req, res, next) {
     ?.TrafficData
     ?.Rank
     ?._text
-  res.json(rank);
+  res.json(rank ? rank : 'no ranking available, try with another url');
 });
 
 module.exports = router;
