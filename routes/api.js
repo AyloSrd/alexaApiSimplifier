@@ -33,6 +33,3 @@ router.get('/:token/:site', async function(req, res, next) {
 });
 
 module.exports = router;
-
-// curl -H "x-api-key: jN77pHX9GJ3Jsg03EElFm7Za1J6OBhOa61nqhyYQ" "https://awis.api.alexa.com/api?Action=UrlInfo&Count=10&ResponseGroup=Rank,LinksInCount&Start=1&Url=cnn.com"
-// 'cVQDS3eauzCfurmsrvH49DUVOxpQ3rb4VEggZ8Ob'
