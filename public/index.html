@@ -3,12 +3,20 @@
 <head>
   <title>Alexa Rank API Simplifier</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <h1>Alexa Rank API Simplifier</h1>
-  <p>Welcome Alexa Rank API Simplifier.</p>
-  <p>Make get requests to https://awis.api.alexa.com from Salesforce</p>
+  <section>
+    <h1>Alexa Rank API Simplifier</h1>
+    <p>Welcome Alexa Rank API Simplifier, the easiest way to make GET requests the alexa ranking from your Salesforce API.</p>
+    <ol>
+      <li>Create an <a href="https://aws.amazon.com/fr/awis/getting-started/">AWS awis account</a> and get your API key. </li>
+      <li>Make sure https://alexa-api-simplifier.herokuapp.com/ is included in you CSP Trusted Sites list on Saleseforce (how to <a href="https://www.salesforcecodecrack.com/2019/09/content-security-policycsp-in-salesforce.html#:~:text=Content%20Security%20Policy(CSP)%20in%20Salesforce,-Content%20Security%20Policy&text=The%20main%20objective%20is%20to,add%20a%20CSP%20Trusted%20Site">here</a>)</li>
+      <li>Choose the API COmponent of your choice. The url for the GET request must be structured as follows : https://alexa-api-simplifier.herokuapp.com/api/YOUR AWIS API KEY/THE DOMAIN YOU ARE INSPECTING</li>
+    </ol>
+  </section>
 </body>
 
 </html>
